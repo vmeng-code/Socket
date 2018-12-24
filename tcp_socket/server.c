@@ -63,8 +63,10 @@ int main(int argc , char **argv)
 			//str_echo
 			ssize_t n;
 			char buff[MAX_LINE];
+			memset(buff, 0, sizeof(buff));
 			while((n = read(connfd , buff , MAX_LINE)) > 0)
 			{
+				printf("recv mesg=%s\n", buff);
 				write(connfd , buff , n);
 			}
 			exit(0);

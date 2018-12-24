@@ -22,7 +22,7 @@ void dg_echo(int sockfd , struct sockaddr *pcliaddr , socklen_t clilen)
 			perror("recvfrom error");
 			exit(1);
 		}//if
-
+		printf("recv mesg=%s\n", mesg);
 		if((n = sendto(sockfd , mesg , n , 0 , pcliaddr , len)) < 0)
 		{
 			perror("sendto error");
