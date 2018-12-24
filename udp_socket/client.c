@@ -5,7 +5,7 @@
 #include <netinet/in.h>
 
 
-const int SERV_PORT = 6000;
+const int SERV_PORT = 60000;
 
 const int MAXLINE = 2048;
 void dg_cli(FILE *fp , int sockfd , const struct sockaddr *pservaddr , socklen_t servlen)

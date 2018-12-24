@@ -5,7 +5,7 @@
 #include <sys/types.h>
 #include <netinet/ip.h>
 
-const int SERV_PORT = 6000;
+const int SERV_PORT = 60000;
 const int MAXLINE = 2048;
 
 void dg_echo(int sockfd , struct sockaddr *pcliaddr , socklen_t clilen)
