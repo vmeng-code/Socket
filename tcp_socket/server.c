@@ -33,6 +33,9 @@ int main(int argc , char **argv)
 	servaddr.sin_port = htons(PORT);
 
 	/*(3) 绑定套接字和端口*/
+	int opt = 1;
+	setsockopt(listenfd , SOL_SOCKET , SO_REUSEADDR , &opt , sizeof(opt));//表示停止后可立即解除端口占用
+
 	if(bind(listenfd , (struct sockaddr*)&servaddr , sizeof(servaddr)) < 0)
 	{
 		perror("bind error");
