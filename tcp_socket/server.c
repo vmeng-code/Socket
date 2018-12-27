@@ -71,6 +71,7 @@ int main(int argc , char **argv)
 			{
 				printf("recv mesg=%s\n", buff);
 				write(connfd , buff , n);
+				memset(buff, 0, sizeof(buff));
 			}
 			exit(0);
 		}//if
